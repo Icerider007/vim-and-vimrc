@@ -53,7 +53,7 @@ set showcmd
 set wildmenu
 set wildignore=*.docx,*.jpg,*.png,*.gif,*pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 " Make wildmenu behave similar to Bash completion
-set wildmode=list:longest
+set wildmode=list:longest, full
 
 "}}}
 " PLUGINS-------------------------------------------------------------------------------------
@@ -66,6 +66,9 @@ Plug 'dense-analysis/ale'
 
 Plug 'preservim/nerdtree'
 
+Plug 'vim-airline/vim-airline'
+
+Plug 'lifepillar/vim-gruvbox8'
 
 call plug#end()
 
@@ -74,8 +77,8 @@ call plug#end()
 "{{{
 " Key mapping code goes here
 " Mapping capslock to the escape key
-au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+" au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+" au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
 "You can split the window in vim by typing :vsplit for vertical split or
 ":split for horizontal split
